@@ -4,7 +4,7 @@
 """
 import json, os, sys
 
-WS = '/Users/sunmer/WorkBuddy/2026-09-23-12-35-30'
+WS = os.environ.get('DASH_WS', '<你的工作区目录>')  # 存放 gen_dashboard.py 与 assets/chart.umd.min.js 的目录
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 # 读模板：取 gen_dashboard.py 源码里的 page 字符串

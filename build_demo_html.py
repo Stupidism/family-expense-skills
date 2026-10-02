@@ -10,8 +10,12 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # 读模板：取 gen_dashboard.py 源码里的 page 字符串
 src = open(f'{WS}/gen_dashboard.py', encoding='utf-8').read()
 i0 = src.find('page = """') + len('page = """')
-i1 = src.find('\n"""', i0)
-page = src[i0:i1]
+end_marker = '</html>"""'
+i1 = src.find(end_marker)
+assert i1 > i0, 'template end marker not found'
+page = src[i0:i1] + '</html>'
+# 边界自检：绝不能把 Python 尾巴带进模板
+assert 'page.replace' not in page and page.count('</html>') == 1, 'template boundary broken'
 
 demo = json.load(open(f'{HERE}/expense-dashboard/assets/demo_data.json', encoding='utf-8'))
 payload = json.dumps(demo, ensure_ascii=False)

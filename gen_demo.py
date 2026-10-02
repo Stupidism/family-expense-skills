@@ -94,7 +94,7 @@ for m in range(3, 10):
             'src':'示例账单','note':'demo','review':''})
 # 4月婚礼：酒席大额 + 高铁(婚礼事件) + 5月父亲报销冲减
 wed_items = [
- ('2026-04-26','示例酒店·宴会厅','婚宴酒席',38800.0),
+ ('2026-04-26','示例酒店·宴会厅','婚宴酒席',26800.0),
  ('2026-04-26','示例铁路12306','铁路出行',3060.0),
  ('2026-04-27','示例铁路12306','铁路出行',605.0),
 ]
@@ -112,10 +112,10 @@ records.append({'ym':'2026年5月','date':'2026-05-08','owner':'本人','acct':'
     'catZFB':['人情往来','婚嫁报销'],'event':['婚礼'],'amt':-20000.0,'src':'示例银行流水','note':'demo 报销冲减','review':''})
 # 日常消费
 for m in range(3, 10):
-    for _ in range(random.randint(42, 62)):
+    for _ in range(random.randint(34, 48)):
         c1 = random.choices(list(CATS), weights=[10,6,6,0,0,0,4,3,3,6,2,0,2,12])[0]  # 固定项已单列
         c2 = random.choices([x[0] for x in CATS[c1]], weights=[x[1] for x in CATS[c1]])[0]
-        amt = round(random.choice([random.uniform(8,120), random.uniform(120,900), random.uniform(900,6000)]), 2)
+        amt = round(random.choices([random.uniform(8,120), random.uniform(120,900), random.uniform(900,3000)], weights=[5,3.5,1.5])[0], 2)
         d = f'2026-{m:02d}-{random.randint(1,28):02d}'
         records.append({'ym':f'2026年{m}月','date':d,'owner':random.choice(['本人','配偶']),
             'acct':random.choice(['示例信用卡','示例储蓄卡','示例支付渠道']),

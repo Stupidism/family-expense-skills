@@ -76,7 +76,13 @@ flowchart TD
 
 **在线演示**：https://stupidism.github.io/family-expense-skills/ （GitHub Pages，随机假数据）
 
-`expense-dashboard/assets/demo_data.json` 为随机假数据（402 条，2026年3-9月），结构与真实数据完全一致——三分类法、对账台账、去重规则、月度分组等仪表盘全部功能均可演示。`docs/index.html` 为用该数据渲染的完整单文件仪表盘（Chart.js 内嵌，本地双击也能打开）。
+![仪表盘全站截图](docs/assets/dashboard-full.jpg)
+
+<details><summary>截图对应的数据与说明</summary>
+
+`expense-dashboard/assets/demo_data.json` 为随机假数据（303 条，2026年3-9月），结构与真实数据完全一致——三分类法、对账台账、去重规则、月度分组等仪表盘全部功能均可演示。`docs/index.html` 为用该数据渲染的完整单文件仪表盘（Chart.js 内嵌，本地双击也能打开）。
+
+</details>
 
 ---
 Made with WorkBuddy

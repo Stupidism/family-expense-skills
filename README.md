@@ -1,6 +1,8 @@
 # Family Expense Skills · 家庭开销管理技能组
 
-一组 [WorkBuddy](https://www.workbuddy.cn) 技能，管理"多源账单 → 腾讯文档总表 → 单文件仪表盘"的家庭财务数据管线。
+[![dashboard](docs/assets/dashboard-thumb.jpg)](https://stupidism.github.io/family-expense-skills/)
+
+一组 [WorkBuddy](https://www.workbuddy.cn) 技能，管理"多源账单 → 腾讯文档总表 → 单文件仪表盘"的家庭财务数据管线。点击缩略图打开在线 Demo。
 
 > ⚠️ **本仓库不含任何真实数据**：所有示例均为占位符（`YOUR_FILE_ID`/`父亲`/`示例商户`…），演示数据见 `expense-dashboard/assets/demo_data.json`（随机生成的假数据）。接入你自己的账单即可得到真实结果。
 
